@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="table">
+        <item>Table 1 </item>
+        <item> Table 2 </item>
+        <item> table 3 </item>
+
+        <item>Table 4</item>
+        <item> Table 5 </item>
+        <item> table 6 </item>
+
+        <item>Table 7</item>
+        <item> Table 8 </item>
+        <item> table 9 </item>
+
+        <item>Table 10 </item>
+        <item> Table 11 </item>
+        <item> table 12 </item>
+
+    </string-array>
+</resources>

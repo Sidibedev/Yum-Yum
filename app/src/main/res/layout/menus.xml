@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ad0725"
+    tools:context="com.example.mouhamedalysidibe.restaurant.Menus">
+
+
+
+
+
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:id="@+id/table"
+
+
+                    android:textColor="@android:color/white"
+                    android:gravity="center|right"
+                    android:textStyle="bold" />
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/listView_food" />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
