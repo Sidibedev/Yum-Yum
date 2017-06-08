@@ -8,6 +8,7 @@ public class Monplat {
     public String nom;
     public String description;
     public int image;
+    public double prix;
 
 
     public Long getId_categorie() {
@@ -21,6 +22,13 @@ public class Monplat {
     public Long id_categorie;
 
 
+    public double getPrix() {
+        return prix;
+    }
+
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
 
     public Monplat() {
 
@@ -45,11 +53,12 @@ public class Monplat {
         this.image = image;
     }
 
-    public Monplat(String nom, String description, int image) {
+    public Monplat(String nom, String description, int image , double prix) {
         this.nom = nom;
         this.image = image;
 
         this.description = description;
+        this.prix = prix;
 
     }
 

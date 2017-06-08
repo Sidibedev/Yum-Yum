@@ -34,7 +34,7 @@ public class Menus extends AppCompatActivity {
 
 
 
-      Model m1 = new Model(this , "DB", null , 4); // i instaciate my model
+      Model m1 = new Model(this , "DB", null , 5); // i instaciate my model
 
 
 
@@ -53,67 +53,67 @@ public class Menus extends AppCompatActivity {
 
 
     // Plats pizza
-    Monplat  t_rex = new Monplat("T-Rex" , "sauce tomate, pepperoni, boulettes de bœuf, jambon, double mozzarella" , R.drawable.trex);
-    Monplat supreme_pizza = new Monplat("Suprem","sauce tomate, mozzarella, boulettes de bœuf, jambon, champignons, poivrons verts, oignons, saucisse piquante" , R.drawable.supreme);
-    Monplat  Samouraï = new Monplat("Samouraï" , "sauce tomate, mozzarella, poulet rôti, merguez, oignons, sauce samouraï" , R.drawable.samourai);
-    Monplat   Montagnarde = new Monplat(" Montagnarde" , "crème fraîche, mozzarella, jambon, oignons, reblochon, cornichons" , R.drawable.montagnarde);
-    Monplat  Chickenita = new Monplat("Chickenita" , "sauce tomate, emmental, mozzarella, poulet rôti, tomates, saucisse piquante" , R.drawable.chickenita);
+    Monplat  t_rex = new Monplat("T-Rex" , "sauce tomate, pepperoni, boulettes de bœuf, jambon, double mozzarella" , R.drawable.trex,3500);
+    Monplat supreme_pizza = new Monplat("Suprem","sauce tomate, mozzarella, boulettes de bœuf, jambon, champignons, poivrons verts, oignons, saucisse piquante" , R.drawable.supreme,5000);
+    Monplat  Samouraï = new Monplat("Samouraï" , "sauce tomate, mozzarella, poulet rôti, merguez, oignons, sauce samouraï" , R.drawable.samourai,5000);
+    Monplat   Montagnarde = new Monplat(" Montagnarde" , "crème fraîche, mozzarella, jambon, oignons, reblochon, cornichons" , R.drawable.montagnarde,2500);
+    Monplat  Chickenita = new Monplat("Chickenita" , "sauce tomate, emmental, mozzarella, poulet rôti, tomates, saucisse piquante" , R.drawable.chickenita,3000);
 
 
     // Plats Baguettes
-    Monplat  Divinepepper = new Monplat("Divine pepper" , "sauce tomate, mozzarella, boulettes de bœuf, tomates fraîches, herbe de Provence, sauce poivre" , R.drawable.divinepepper);
-    Monplat  Americain = new Monplat("Americain" , "Boulettes de bœuf, tomates, mozzarella, mayonnaise, frites, ketchup" , R.drawable.lamericain);
-    Monplat  YumBurger = new Monplat("YumBurger" , "sauce burger, boulettes de bœuf, tomates, oignons, cornichons, emmental" , R.drawable.yumburger);
-    Monplat   Reggae = new Monplat(" Reggae" , "sauce tomate, mozzarella, poulet rôti, ananas, poivrons verts, oignons, sauce salsa" , R.drawable.reggae);
-    Monplat  Breakfast = new Monplat("Breakfast" , "crème fraîche, emmental, jambon, tomates, œufs brouillés" , R.drawable.breakfast);
-    Monplat  ChickenLover = new Monplat("Chicken Lover" , "sauce barbecue, mozzarella, poulet rôti, poivrons verts, oignons" , R.drawable.chickenlover);
-    Monplat  MeatLover = new Monplat("Meat Lover" , "sauce tomate, mozzarella, poulet rôti, boulettes de bœuf, merguez, oignons, tomates" , R.drawable.meatlover);
+    Monplat  Divinepepper = new Monplat("Divine pepper" , "sauce tomate, mozzarella, boulettes de bœuf, tomates fraîches, herbe de Provence, sauce poivre" , R.drawable.divinepepper ,1200);
+    Monplat  Americain = new Monplat("Americain" , "Boulettes de bœuf, tomates, mozzarella, mayonnaise, frites, ketchup" , R.drawable.lamericain,1500);
+    Monplat  YumBurger = new Monplat("YumBurger" , "sauce burger, boulettes de bœuf, tomates, oignons, cornichons, emmental" , R.drawable.yumburger,1200);
+    Monplat   Reggae = new Monplat(" Reggae" , "sauce tomate, mozzarella, poulet rôti, ananas, poivrons verts, oignons, sauce salsa" , R.drawable.reggae,1750);
+    Monplat  Breakfast = new Monplat("Breakfast" , "crème fraîche, emmental, jambon, tomates, œufs brouillés" , R.drawable.breakfast,1700);
+    Monplat  ChickenLover = new Monplat("Chicken Lover" , "sauce barbecue, mozzarella, poulet rôti, poivrons verts, oignons" , R.drawable.chickenlover,1700);
+    Monplat  MeatLover = new Monplat("Meat Lover" , "sauce tomate, mozzarella, poulet rôti, boulettes de bœuf, merguez, oignons, tomates" , R.drawable.meatlover,1000);
 
 
 
 
     // Plats Pastas
 
-    Monplat  Pennepoulet = new Monplat("Penne poulet" , "penne, mozzarella, poulet, moutarde, crème fraîche" , R.drawable.pennepoulet);
-    Monplat  Pennebolognaise = new Monplat("Penne bolognaise" , "penne, sauce tomate, boulettes de bœuf, mozzarella, sauce basilic" , R.drawable.pennepoulet);
-    Monplat  PenneCarbonara = new Monplat("Penne Carbonara" , "penne, crème fraîche, jambon, emmental" , R.drawable.pennepoulet);
-    Monplat  Penne3fromages = new Monplat("Penne 3 fromages" , "penne, crème fraîche, mozzarella, chèvre, reblochon" , R.drawable.pennepoulet);
+    Monplat  Pennepoulet = new Monplat("Penne poulet" , "penne, mozzarella, poulet, moutarde, crème fraîche" , R.drawable.pennepoulet,4200);
+    Monplat  Pennebolognaise = new Monplat("Penne bolognaise" , "penne, sauce tomate, boulettes de bœuf, mozzarella, sauce basilic" , R.drawable.pennepoulet,4500);
+    Monplat  PenneCarbonara = new Monplat("Penne Carbonara" , "penne, crème fraîche, jambon, emmental" , R.drawable.pennepoulet,4800);
+    Monplat  Penne3fromages = new Monplat("Penne 3 fromages" , "penne, crème fraîche, mozzarella, chèvre, reblochon" , R.drawable.pennepoulet,4000);
 
 
     // Plats Donuts
 
-    Monplat  Donutnature = new Monplat("Donut nature" , "" , R.drawable.donutnature);
-    Monplat  Donutnappe = new Monplat("Donut nappé" , "" , R.drawable.donutnappe);
-    Monplat  DonutCandy = new Monplat("Donut  Candy" , "" , R.drawable.donutcandy);
-    Monplat  DonutFourre = new Monplat("Donut Fourré" , "" , R.drawable.donutfourre);
+    Monplat  Donutnature = new Monplat("Donut nature" , "" , R.drawable.donutnature,1000);
+    Monplat  Donutnappe = new Monplat("Donut nappé" , "" , R.drawable.donutnappe,1000);
+    Monplat  DonutCandy = new Monplat("Donut  Candy" , "" , R.drawable.donutcandy,1000);
+    Monplat  DonutFourre = new Monplat("Donut Fourré" , "" , R.drawable.donutfourre,1000);
 
 
 
 
     // Plats Snacks
 
-    Monplat  WingsNatures = new Monplat("Wings Natures" , "6 pièces - sans sauce" , R.drawable.wingsnatures);
-    Monplat  WingsHot = new Monplat("Wings Hot" , "6 pièces - sauce pimentée" , R.drawable.wingsnatures);
-    Monplat   WingsBarbecue = new Monplat(" Wings Barbecue" , "6 pièces - sauce barbecue" , R.drawable.wingsnatures);
-    Monplat  WingsSweetChili = new Monplat("Wings Sweet Chili" , "6 pièces - sauce Sweet Chili" , R.drawable.wingsnatures);
-    Monplat  WingsMiel = new Monplat("Wings Miel" , "Wings Miel" , R.drawable.wingsnatures);
-    Monplat  Fritesaufour = new Monplat(" Frites au four" , "200 grammes" , R.drawable.fritesaufour);
-    Monplat  ChickenNuggets = new Monplat("Chicken Nuggets" , "8 pieces" , R.drawable.chickennuggets);
-    Monplat  CheesyBread = new Monplat(" Cheesy Bread" , "8 batonnets" , R.drawable.cheesybread);
+    Monplat  WingsNatures = new Monplat("Wings Natures" , "6 pièces - sans sauce" , R.drawable.wingsnatures,2200);
+    Monplat  WingsHot = new Monplat("Wings Hot" , "6 pièces - sauce pimentée" , R.drawable.wingsnatures,2500);
+    Monplat   WingsBarbecue = new Monplat(" Wings Barbecue" , "6 pièces - sauce barbecue" , R.drawable.wingsnatures,2100);
+    Monplat  WingsSweetChili = new Monplat("Wings Sweet Chili" , "6 pièces - sauce Sweet Chili" , R.drawable.wingsnatures,2000);
+    Monplat  WingsMiel = new Monplat("Wings Miel" , "Wings Miel" , R.drawable.wingsnatures,1900);
+    Monplat  Fritesaufour = new Monplat(" Frites au four" , "200 grammes" , R.drawable.fritesaufour,1700);
+    Monplat  ChickenNuggets = new Monplat("Chicken Nuggets" , "8 pieces" , R.drawable.chickennuggets,1500);
+    Monplat  CheesyBread = new Monplat(" Cheesy Bread" , "8 batonnets" , R.drawable.cheesybread ,1500);
 
 
 
 
     // Plats Boissons gaz
-    Monplat  CocaCola = new Monplat("Coca-Cola" , "Canette 33cl" , R.drawable.coca);
-    Monplat  Sprite = new Monplat("Sprite" , "Canette 33cl" , R.drawable.sprite);
-    Monplat  Fanta = new Monplat("Fanta" , "Canette 33cl" , R.drawable.fanta);
-    Monplat  Vimto = new Monplat("Vimto" , "Canette 33cl" , R.drawable.vimto);
-    Monplat  CocaZero = new Monplat("Coca Zero" , "Canette 33cl" , R.drawable.donutfourre);
-    Monplat Schweppescitron = new Monplat("Schweppes citron" ,"Canette 33cl",R.drawable.schweppescitron);
-    Monplat  Schweppestonic = new Monplat("Schweppes tonic" ,"Canette 33cl", R.drawable.schweppestonic );
-    Monplat Schweppesagrum = new Monplat("Schweppes agrum'" ,"Canette 33cl", R.drawable.schweppesagrume );
-    Monplat Monster = new Monplat("Monster" ,"Canette 50cl", R.drawable.monster );
+    Monplat  CocaCola = new Monplat("Coca-Cola" , "Canette 33cl" , R.drawable.coca,1000);
+    Monplat  Sprite = new Monplat("Sprite" , "Canette 33cl" , R.drawable.sprite,1000);
+    Monplat  Fanta = new Monplat("Fanta" , "Canette 33cl" , R.drawable.fanta,1000);
+    Monplat  Vimto = new Monplat("Vimto" , "Canette 33cl" , R.drawable.vimto,1000);
+    Monplat  CocaZero = new Monplat("Coca Zero" , "Canette 33cl" , R.drawable.donutfourre,1000);
+    Monplat Schweppescitron = new Monplat("Schweppes citron" ,"Canette 33cl",R.drawable.schweppescitron,1000);
+    Monplat  Schweppestonic = new Monplat("Schweppes tonic" ,"Canette 33cl", R.drawable.schweppestonic ,1000);
+    Monplat Schweppesagrum = new Monplat("Schweppes agrum'" ,"Canette 33cl", R.drawable.schweppesagrume ,1000);
+    Monplat Monster = new Monplat("Monster" ,"Canette 50cl", R.drawable.monster,1000 );
 
 
 
@@ -124,8 +124,8 @@ public class Menus extends AppCompatActivity {
 
 
     //Plats Alcool
-    Monplat vin = new Monplat("Vins" , "" ,R.drawable.vin);
-    Monplat Biere = new Monplat("Bieres" , "" ,R.drawable.biere );
+    Monplat vin = new Monplat("Vins" , "" ,R.drawable.vin,3000);
+    Monplat Biere = new Monplat("Bieres" , "" ,R.drawable.biere,1200 );
 
 
 
@@ -133,11 +133,11 @@ public class Menus extends AppCompatActivity {
 
     // Plats Cocktail
 
-    Monplat Mojito = new Monplat("Mojito" , "" ,R.drawable.mojito );
-    Monplat ngor = new Monplat("Soleil de ngor" , "" ,R.drawable.soleilngor );
-    Monplat cock1 = new Monplat("Cocktail SIDIBE" , "" ,R.drawable.cock1 );
-    Monplat cock2 = new Monplat("Cocktail FONKOUE" , "" ,R.drawable.cock2 );
-    Monplat cock3 = new Monplat("Cocktail DEAS" , "" ,R.drawable.cock3 );
+    Monplat Mojito = new Monplat("Mojito" , "" ,R.drawable.mojito,5000 );
+    Monplat ngor = new Monplat("Soleil de ngor" , "" ,R.drawable.soleilngor ,5000 );
+    Monplat cock1 = new Monplat("Cocktail SIDIBE" , "" ,R.drawable.cock1,5000 );
+    Monplat cock2 = new Monplat("Cocktail FONKOUE" , "" ,R.drawable.cock2 ,5000);
+    Monplat cock3 = new Monplat("Cocktail DEAS" , "" ,R.drawable.cock3 ,5000);
 
 
 
@@ -146,10 +146,10 @@ public class Menus extends AppCompatActivity {
 
     //Plats Boisson Chaude
 
-    Monplat  Expressocourt = new Monplat(" Expresso court" ,"", R.drawable.expressocourt );
-    Monplat  Expressolong = new Monplat(" Expresso long" ,"", R.drawable.expressocourt );
-    Monplat  Cappuccino = new Monplat("Cappuccino" ,"", R.drawable.cappuccino );
-    Monplat   Chocolatchaud = new Monplat(" Chocolat chaud " ,"", R.drawable.chocolatchaud );
+    Monplat  Expressocourt = new Monplat(" Expresso court" ,"", R.drawable.expressocourt,2500);
+    Monplat  Expressolong = new Monplat(" Expresso long" ,"", R.drawable.expressocourt ,2000);
+    Monplat  Cappuccino = new Monplat("Cappuccino" ,"", R.drawable.cappuccino,2000 );
+    Monplat   Chocolatchaud = new Monplat(" Chocolat chaud " ,"", R.drawable.chocolatchaud,1550 );
 
 
 
@@ -165,15 +165,29 @@ public class Menus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menus);
 
-        pizza.setId(1);
-        baguettes.setId(2);
-        pastas.setId(3);
-        donuts.setId(4);
-        snacks.setId(5);
-        Boisson_gaz.setId(6);
-        Alcool.setId(9);
-        Cocktail.setId(8);
-        Boisson_chaude.setId(7);
+//        m1.deleteAllCategorie();
+//        m1.save(pizza);
+//        m1.save(baguettes);
+//        m1.save(pastas);
+//        m1.save(donuts);
+//        m1.save(snacks);
+//////
+//        m1.save(Boisson_gaz);
+//        m1.save(Boisson_chaude);
+//        m1.save(Cocktail);
+//        m1.save(Alcool);
+
+
+        pizza.setId(10);
+        baguettes.setId(11);
+        pastas.setId(12);
+        donuts.setId(13);
+        snacks.setId(14);
+        Boisson_gaz.setId(15);
+        Alcool.setId(16);
+        Cocktail.setId(17);
+        Boisson_chaude.setId(18);
+
 
 
 
@@ -261,17 +275,7 @@ public class Menus extends AppCompatActivity {
 
 
 
-        //m.deleteAllCategorie();
-//         m1.save(pizza);
-//        m1.save(baguettes);
-//        m1.save(pastas);
-//       m1.save(donuts);
-//       m1.save(snacks);
-////
-//        m1.save(Boisson_gaz);
-//       m1.save(Boisson_chaude);
-//       m1.save(Cocktail);
-//      m1.save(Alcool);
+
 
 //
         List<Categorie> cat = m1.getAllcategorie();
@@ -350,8 +354,14 @@ public class Menus extends AppCompatActivity {
 
 
         }else if(item.getItemId() == R.id.note){
-             Intent i = new Intent(Menus.this , Note.class);
-             startActivity(i);
+            Intent i = new Intent(Menus.this , Note.class);
+            startActivity(i);
+
+        }else if(item.getItemId() == R.id.panier){
+
+            Intent panier = new Intent(Menus.this , Panier.class);
+            startActivity(panier);
+
 
         }
 

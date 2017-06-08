@@ -21,6 +21,7 @@
         <activity android:name=".boissonActivity"/>
         <activity android:name=".Note"/>
         <activity android:name=".DetailPlat"/>
+        <activity android:name=".Panier"/>
     </application>
 
 </manifest>

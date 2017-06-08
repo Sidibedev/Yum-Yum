@@ -25,7 +25,7 @@ public class Plats extends AppCompatActivity{
 
 
 
-    Model m1 = new Model(this , "DB", null , 4);
+    Model m1 = new Model(this , "DB", null , 5);
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +66,7 @@ public class Plats extends AppCompatActivity{
                 intent.putExtra("nom", m1.getAllPlat(id_categorie).get(i).getNom());
                 intent.putExtra("description", m1.getAllPlat(id_categorie).get(i).getDescription());
                 intent.putExtra("image" ,m1.getAllPlat(id_categorie).get(i).getImage());
+                intent.putExtra("prix" , m1.getAllPlat(id_categorie).get(i).getPrix());
                 startActivity(intent);
 
 
@@ -108,8 +109,19 @@ public class Plats extends AppCompatActivity{
             retry.show();
 
 
-        }
-        return super.onOptionsItemSelected(item);
+        }else if(item.getItemId() == R.id.note){
+        Intent i = new Intent(Plats.this , Note.class);
+        startActivity(i);
+
+       }else if(item.getItemId() == R.id.panier){
+
+        Intent panier = new Intent(Plats.this , Panier.class);
+        startActivity(panier);
+
+
+    }
+
+    return super.onOptionsItemSelected(item);
     }
 
 

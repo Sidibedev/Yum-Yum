@@ -6,8 +6,9 @@
         android:title="Appeler gerant"
         android:icon="@drawable/ic_action_name"/>
     <item android:id="@+id/panier"
-        android:title="Voir panier"
-        app:showAsAction="never"/>
+        android:title="Panier"
+        android:icon="@drawable/panier"
+        app:showAsAction="always"/>
 
     <item android:id="@+id/note"
         android:title="Notez Nous"

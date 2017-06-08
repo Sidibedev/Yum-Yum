@@ -39,9 +39,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ajouter au panier"
-        android:id="@+id/button"
+        android:id="@+id/ajouterpanier"
         android:layout_below="@+id/descplatdetail"
         android:layout_marginTop="75dp"
         android:background="@color/accent_material_light"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/prix"
+        android:layout_below="@+id/descplatdetail"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/white" />
 </RelativeLayout>

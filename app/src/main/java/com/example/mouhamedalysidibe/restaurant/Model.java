@@ -23,8 +23,10 @@ public class Model extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE Plat(C_ID_Plat INTEGER PRIMARY KEY AUTOINCREMENT , C_ID_Categorie INTEGER , C_Nom_Plat TEXT , C_Photo_Plat INTEGER , C_Description_Plat TEXT) ");
+        sqLiteDatabase.execSQL("CREATE TABLE Plat(C_ID_Plat INTEGER PRIMARY KEY AUTOINCREMENT , C_ID_Categorie INTEGER , C_Nom_Plat TEXT , C_Photo_Plat INTEGER , C_Description_Plat TEXT , C_Prix_Plat INTEGER) ");
         sqLiteDatabase.execSQL("CREATE TABLE Categorie(C_ID INTEGER PRIMARY KEY AUTOINCREMENT , C_Nom TEXT , C_Photo TEXT , C_Description TEXT) ");
+        sqLiteDatabase.execSQL("CREATE TABLE Panier(C_ID_Panier INTEGER PRIMARY KEY AUTOINCREMENT , C_Nom_Panier TEXT , C_Photo_Panier TEXT , C_Description_Panier , C_Prix_Panier INTEGER) ");
+
 
 
     }
@@ -35,6 +37,7 @@ public class Model extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Categorie");
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Plat");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS Panier");
 
         // recreate the tables
         onCreate(sqLiteDatabase);
@@ -60,6 +63,26 @@ public class Model extends SQLiteOpenHelper {
 
     }
 
+    public void saveDansPanier(Monplat p) {
+        ContentValues v = new ContentValues();
+        v.put("C_Nom_Panier", p.getNom());
+        v.put("C_Photo_Panier",p.getImage());
+        v.put("C_Description_Panier", p.getDescription());
+        v.put("C_Prix_Panier" , p.getPrix());
+        long id = p.getId();
+        if (id == 0) {
+            id = this.getWritableDatabase().insert("Panier", null, v);
+            p.setId(id);
+
+        } else {
+
+            this.getWritableDatabase().update("Panier", v, "C_ID_Panier = ?", new String[]{String.valueOf(id)});
+
+        }
+
+
+    }
+
 
     public void savePlat(Monplat p , long id_Categorie){
 
@@ -67,6 +90,7 @@ public class Model extends SQLiteOpenHelper {
         v1.put("C_Nom_Plat", p.getNom());
         v1.put("C_Photo_Plat", p.getImage());
         v1.put("C_Description_Plat", p.getDescription());
+        v1.put("C_Prix_Plat" , p.getPrix());
         v1.put("C_ID_Categorie" , id_Categorie);
         long id = p.getId();
         if (id == 0) {
@@ -109,6 +133,10 @@ public class Model extends SQLiteOpenHelper {
         return this.getReadableDatabase().rawQuery("select * from Categorie", null);
     }
 
+    public Cursor getAllPlatDansPanierAsCursor() {
+        return this.getReadableDatabase().rawQuery("select * from Panier", null);
+    }
+
     public Cursor getAllPlatAsCursor(long id ){
         return this.getReadableDatabase().rawQuery("select * from Plat where C_ID_Categorie = "+id, null);
 
@@ -135,6 +163,28 @@ public class Model extends SQLiteOpenHelper {
         return resultat;
 
     }
+
+    public List<Monplat> getAllPlatDansPanier() {
+        List<Monplat> resultat = new ArrayList<Monplat>();
+
+        Cursor c = this.getAllPlatDansPanierAsCursor();
+        if (c.moveToFirst()) {
+            do {
+                //
+                Long id = c.getLong(c.getColumnIndex("C_ID_Panier"));
+                String nom = c.getString(c.getColumnIndex("C_Nom_Panier"));
+                String description = c.getString(c.getColumnIndex("C_Description_Panier"));
+                int photo = c.getInt(c.getColumnIndex("C_Photo_Panier"));
+                Double prix = c.getDouble(c.getColumnIndex("C_Prix_Panier"));
+                Monplat cat = new Monplat(nom, description, photo , prix);
+                cat.setId(id);
+
+                resultat.add(cat);
+            } while (c.moveToNext());
+        }
+        return resultat;
+
+    }
     public List<Monplat> getAllPlat(Long id_categorie) {
         List<Monplat> resultat = new ArrayList<Monplat>();
 
@@ -146,8 +196,9 @@ public class Model extends SQLiteOpenHelper {
                 String nom = c.getString(c.getColumnIndex("C_Nom_Plat"));
                 String description = c.getString(c.getColumnIndex("C_Description_Plat"));
                 int photo = c.getInt(c.getColumnIndex("C_Photo_Plat"));
+                double prix = c.getDouble(c.getColumnIndex("C_Prix_Plat"));
                 Long id_cat = c.getLong(c.getColumnIndex("C_ID_Categorie"));
-                Monplat cat = new Monplat(nom, description, photo);
+                Monplat cat = new Monplat(nom, description, photo , prix);
                 cat.setId(id);
                 cat.setId_categorie(id_cat);
 
@@ -157,6 +208,7 @@ public class Model extends SQLiteOpenHelper {
         return resultat;
 
     }
+
 
 
 
@@ -173,6 +225,30 @@ public class Model extends SQLiteOpenHelper {
 
         this.getWritableDatabase().delete("Plat" ,null , null);
     }
+
+    public void deleteAllPlatDansPanier(){
+
+        this.getWritableDatabase().delete("Panier" ,null , null);
+    }
+
+
+    public Boolean PanierVide (){
+
+
+
+        Cursor c = this.getAllPlatDansPanierAsCursor();
+
+        if(c.getCount() == 0) {
+
+            return true;
+        }else{
+            return false;
+
+        }
+
+
+    }
+
 
 
 
